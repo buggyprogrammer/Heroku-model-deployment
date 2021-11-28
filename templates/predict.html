@@ -4,11 +4,15 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="{{url_for('static', filename='output.css')}}""
+    />
     <title>Model Deployment</title>
   </head>
   <body>
-    <h2>Your output is</h2>
-    {{output}}
+    <div class="output">
+      <h1>Your Expected salary</h1>
+      <br />
+      <p>{{output}}</p>
+    </div>
   </body>
 </html>
