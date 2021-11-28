@@ -19,7 +19,7 @@ def predict():
 
     input_arr = [[age, exp]]
     prediction = model.predict(input_arr)
-    return render_template('index.html', output=f'Your expected salary should be $ {float(prediction):0.2f}')
+    return render_template('predict.html', output=f'Your expected salary should be $ {float(prediction):0.2f}')
 
 
 if __name__ == "__main__":
