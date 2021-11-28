@@ -4,7 +4,22 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Model Deployment</title>
   </head>
-  <body></body>
+  <body>
+    <h2 style="color: tomato">What will be your salaray</h2>
+    <form action="/predict" class="form" method="post">
+      <label for="age">AGE</label> <br />
+      <input type="text" name="age" id="age" placeholder="your age" /> <br />
+      <label for="exp">Experience</label> <br />
+      <input type="text" name="exp" id="exp" placeholder="your experience" />
+      <br />
+      <input type="submit" />
+    </form>
+
+    <br />
+    <br />
+    {{output}}
+  </body>
 </html>
