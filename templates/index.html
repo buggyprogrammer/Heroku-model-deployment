@@ -1,21 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<!-- Coding By CodingNepal - youtube.com/codingnepal -->
+<html lang="en" dir="ltr">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <title>Model Deployment</title>
+    <meta charset="utf-8" />
+    <title>Deployment</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}" />
   </head>
   <body>
-    <h2 style="color: tomato">What will be your salaray</h2>
-    <form action="/predict" class="form" method="post">
-      <label for="age">AGE</label> <br />
-      <input type="text" name="age" id="age" placeholder="your age" /> <br />
-      <label for="exp">Experience</label> <br />
-      <input type="text" name="exp" id="exp" placeholder="your experience" />
-      <br />
-      <input type="submit" />
-    </form>
+    <div class="center">
+      <h1>Predict Salary</h1>
+      <form action="/predict" method="post">
+        <div class="txt_field">
+          <input type="text" id="age" name="age" />
+          <span></span>
+          <label for="age">Your Age</label>
+        </div>
+        <div class="txt_field">
+          <input type="text" required id="exp" name="exp" />
+          <span></span>
+          <label for="exp">Years of Experience</label>
+        </div>
+        <input type="submit" value="Predict" />
+      </form>
+    </div>
   </body>
 </html>
